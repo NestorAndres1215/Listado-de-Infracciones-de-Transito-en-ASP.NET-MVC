@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EC3_NESTOR_ATIRO_MVCASPNET.props" />
+</Project>

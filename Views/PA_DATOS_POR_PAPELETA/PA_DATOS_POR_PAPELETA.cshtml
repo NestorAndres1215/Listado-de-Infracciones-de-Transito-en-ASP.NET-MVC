@@ -1,0 +1,85 @@
+﻿@model IEnumerable<EC3_NESTOR_ATIRO_MVCASPNET.Models.PA_DATOS_POR_PAPELETA>
+
+@{
+    ViewData["Title"] = "PA_DATOS_POR_PAPELETA";
+    var suma = Model.Sum(x => x.importe);
+
+    var cant = Model.Count();
+
+}
+
+<h1 class="text-center text-primary">CONSULTAS DE DATOS DE PAPELETA</h1>
+<br />
+@using (Html.BeginForm())
+{
+
+    <div>
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Seleccione el DNI:</h5>
+                @Html.DropDownList("Dnipro", (SelectList)ViewBag.LISTA_DNI, "", new { @class = "form-control" })
+                <br />
+            </div>
+            <div class="col-md-4">
+                <h5>Ingrese el año:</h5>
+                <input class="form-control" name="A" type="number" new />
+                <br />
+            </div>
+        </div>
+
+        <button class="btn btn-primary " type="submit">ACEPTAR</button>
+        <br />
+        <br />
+
+
+    </div>}
+<p>
+
+</p>
+<table class="table">
+    <thead class="bg-primary text-white">
+        <tr>
+            <th>
+                <h5>DESCRIPCION</h5>
+            </th>
+            <th>
+                <h5>CODIGO DE POLICIA</h5>
+            </th>
+            <th>
+                <h5>NOMBRE DE POLICIA</h5>
+            </th>
+            <th>
+                <h5>IMPORTE</h5>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Desinf)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idpol)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nompol)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.importe)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+    
+
+</table>
+<br />
+<b>Cantidad:</b>
+@cant
+<br />
+<b>Suma de importes:</b>
+@suma

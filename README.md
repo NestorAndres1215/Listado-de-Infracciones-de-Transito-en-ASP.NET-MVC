@@ -28,7 +28,7 @@ Este proyecto es una aplicación web construida con **ASP.NET MVC** que permite 
 
 ### 🔧 Prerrequisitos
 Asegúrate de tener instalado en tu equipo:
-- **Visual Studio 2022** (o superior)
-- **.NET Core SDK** (versión compatible con el proyecto)
-- **SQL Server** (o Azure SQL Database si es en la nube)
-- **Git** (para clonar el repositorio)
+- **Visual Studio 2019** 
+- **.NET Core 5 SDK** 
+- **SQL Server** 
+

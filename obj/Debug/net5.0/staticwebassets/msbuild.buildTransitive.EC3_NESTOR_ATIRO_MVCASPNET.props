@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\EC3_NESTOR_ATIRO_MVCASPNET.props" />
-</Project>
